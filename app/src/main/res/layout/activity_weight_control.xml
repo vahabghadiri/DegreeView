@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/green">
+
+    <TextView
+            android:id="@+id/tvWeighthNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="200"
+            android:textColor="@color/white"
+            android:textSize="45dp"/>
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="140dp"
+            android:background="@color/white"
+            app:shape_arc_cropDirection="outside"
+            app:shape_arc_height="12dp"
+            app:shape_arc_position="top">
+
+        <FrameLayout
+                android:id="@+id/frmWhite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:overScrollMode="never"
+                    android:id="@+id/rvWeights"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="5dp"
+                    android:layoutDirection="ltr"/>
+
+            <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/delete_red"/>
+
+            <com.github.florent37.shapeofview.shapes.TriangleView
+                    android:layout_width="15dp"
+                    android:layout_height="9dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/green">
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/green"/>
+            </com.github.florent37.shapeofview.shapes.TriangleView>
+        </FrameLayout>
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/green"
+            android:clipChildren="false"
+            app:shape_arc_cropDirection="outside"
+            app:shape_arc_height="50dp">
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/green"/>
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+</FrameLayout>

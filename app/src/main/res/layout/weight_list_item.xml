@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+    <com.vahabghadiri.degreeviewsampleapp.degreeview.DegreeView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom|center_horizontal"
+        android:text="125"
+        android:textColor="@color/gray1"
+        android:textSize="16dp" />
+</LinearLayout>
