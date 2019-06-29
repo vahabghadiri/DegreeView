@@ -22,11 +22,11 @@ class WeightControlActivity : AppCompatActivity() {
     }
 
     private fun renderCurrentLatestWeight(weight: Float) {
-//        latestWeight = weight
-//        rvWeights.post {
-//            val px = mmPixel * 10 * weight - startOffset + badStartOffset
-//            rvWeights.smoothScrollBy(px.toInt(), 0, OvershootInterpolator())
-//        }
+        latestWeight = weight
+        rvWeights.post {
+            val px = mmPixel * 10 * weight - startOffset + badStartOffset
+            rvWeights.smoothScrollBy(px.toInt(), 0, OvershootInterpolator())
+        }
     }
 
     private fun setupWeightViews() {
@@ -73,8 +73,8 @@ class WeightControlActivity : AppCompatActivity() {
         val rawValue = offset + startOffset - badStartOffset
         val result = (rawValue.toFloat() / mmPixel) / 10
 
-        if (mmPixel!=0f)
-        latestWeight = result.toOneDigit()
+        if (mmPixel != 0f)
+            latestWeight = result.toOneDigit()
         val str = "$latestWeight kg"
         tvWeighthNum.text = str
     }
